@@ -1,5 +1,5 @@
 const words = ["ground", "control", "to", "major", "tom"];
-const numbers = [1, 2, 3, 4];
+const numbers = [1, 2, 3, 4, 5];
 
 
 const map = function(array, cb) {
