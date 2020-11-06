@@ -1,20 +1,10 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (const elem of arr1) {
-    if (elem !== arr2[arr2.indexOf(elem)]) {
-      return false;
-    }
-  }
-  return true;
-};
+const _ = require('./index');
 
 const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`✅✅✅ Assertion passed`)
+  if (_.eqArrays(arr1, arr2)) {
+    console.log(`✅✅✅ Assertion passed: ${arr1} === ${arr2}`)
   }
-  else console.log(`⛔⛔⛔ Assertion failed`);
+  else console.log(`⛔⛔⛔ Assertion failed: ${arr1} !== ${arr2}`);
 };
 
-assertArraysEqual([1,2], [1,"2"]);
+module.exports = assertArraysEqual;
